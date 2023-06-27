@@ -1,0 +1,194 @@
+.event-home-tab {
+  padding: 20px;
+  margin-top: 100px;
+  color: var(--color);
+  h1 {
+    text-align: center;
+  }
+  .list-of-events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+    .event-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--light);
+      padding: 10px;
+      box-shadow: 5px 4px 10px var(--shadow);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        transform: translate(0, -5px);
+        box-shadow: 5px 10px 10px var(--shadow);
+      }
+      &:hover .advance-tool {
+        display: flex;
+        animation: cardani 0.3s ease-in-out forwards;
+      }
+      @keyframes cardani {
+        100% {
+          opacity: 1;
+        }
+      }
+      img {
+        width: 330px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .content {
+        padding: 15px 20px 5px;
+        display: flex;
+        flex-direction: column;
+        .title {
+          font-size: 19px;
+          color: var(--gray);
+        }
+        .dist {
+          font-size: 26px;
+          color: var(--color);
+          font-weight: 600;
+        }
+        p {
+          font-size: 19px;
+          color: var(--gray);
+        }
+        .progres {
+          width: 100%;
+          height: 12px;
+          border-radius: 20px;
+          background-color: var(--shadow);
+          position: relative;
+
+          span {
+            display: block;
+            &:nth-child(1) {
+              width: 60%;
+              height: 100%;
+              background-color: var(--success);
+              border-radius: 20px;
+            }
+            &:nth-child(2) {
+              top: -25%;
+              left: 55%;
+              border-radius: 50%;
+              position: absolute;
+              width: 18px;
+              height: 150%;
+              background-color: var(--success);
+              &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: var(--light);
+                position: absolute;
+                border-radius: 50%;
+                transform: scale(0.6);
+              }
+            }
+          }
+        }
+        button {
+          margin-top: 12px;
+          background-color: var(--purple);
+          color: var(--light);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    padding: 0px;
+  }
+  @media screen and (max-width: 395px) {
+    .list-of-events {
+      .event-card {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .help-events {
+    margin-top: 50px;
+    padding: 20px 40px;
+    h1 {
+      text-align: left;
+    }
+    .help-details {
+      margin: 20px 5px;
+      P {
+        display: flex;
+        color: var(--gray);
+
+        b {
+          margin-right: 10px;
+        }
+      }
+    }
+    button {
+      background-color: var(--primary);
+      color: var(--light);
+    }
+  }
+}
+
+// list event
+.id-event-list {
+  margin-top: 100px;
+  padding: 20px;
+  h1 {
+    text-align: center;
+  }
+  .media-type {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+    span {
+      width: 50%;
+      background-color: var(--shadow);
+      padding: 5px 10px;
+      border-right: 1px solid var(--gray);
+      text-align: center;
+      text-transform: capitalize;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      &:nth-child(2) {
+        border: none;
+      }
+    }
+    .active {
+      background-color: var(--border-light);
+    }
+  }
+  .list-of-medias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+    .list-gallery {
+      padding: 20px;
+      background-color: var(--light);
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--shadow);
+      transition: 0.3s ease-in-out;
+      &:hover {
+        box-shadow: 10px 10px 10px var(--shadow);
+        transform: translate(0, -10px);
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+  }
+}

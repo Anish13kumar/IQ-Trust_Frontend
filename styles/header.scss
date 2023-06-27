@@ -1,0 +1,217 @@
+.nav-color {
+  color: var(--font-color);
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  color: var(--font-color);
+  box-shadow: 0 0 10px var(--border-light);
+  transition: 0.1s linear;
+  padding: 5px 20px;
+  z-index: 1000;
+  .res-menu {
+    span {
+      background-color: var(--font-color);
+    }
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--light);
+  transform: translate(0, -10px);
+  opacity: 0;
+  animation: header 0.7s ease-in-out forwards;
+  transition: 0.2s ease-in-out;
+  background-color: transparent;
+  z-index: 1000;
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    img {
+      width: 60px;
+      height: 60px;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  .nav {
+    display: flex;
+    gap: 20px;
+    transition: 0.3s ease-in-out;
+    .link {
+      text-transform: capitalize;
+      font-size: 19px;
+      font-weight: 500;
+      transition: 0.1s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        color: var(--primary);
+      }
+    }
+    .active {
+      transition: 0.1s ease-in-out;
+      color: var(--primary);
+      font-size: 20px;
+    }
+  }
+  .donate {
+    background-color: var(--primary);
+    color: var(--light);
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+  .res-menu {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1000;
+    background-color: #f1f1f1;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    span {
+      transition: 0.1s;
+      width: 20px;
+      height: 3px;
+      display: block;
+      background-color: var(--font-color);
+      box-shadow: 0 0 10px var(--border-light);
+      &:nth-child(2) {
+        width: 16px;
+      }
+      &:nth-child(3) {
+        width: 12px;
+      }
+    }
+  }
+  @keyframes header {
+    100% {
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+
+  //   on start animation
+  @keyframes resclose {
+    40% {
+      transform: rotate(-62deg) translate(-5px, 5px);
+      background-color: var(--font-color);
+    }
+    70% {
+      background-color: var(--font-color);
+      transform: rotate(-52deg) translate(-5px, 5px);
+    }
+    100% {
+      background-color: var(--font-color);
+      transform: rotate(-59deg) translate(-5px, 5px);
+    }
+  }
+
+  @keyframes resclose2 {
+    100% {
+      width: 0;
+    }
+  }
+
+  @keyframes resclose3 {
+    40% {
+      background-color: var(--font-color);
+      transform: rotate(62deg) translate(-3px, -4px);
+    }
+    70% {
+      background-color: var(--font-color);
+      transform: rotate(56deg) translate(-3px, -4px);
+    }
+    100% {
+      background-color: var(--font-color);
+      width: 20px;
+      transform: rotate(59deg) translate(-3px, -4px);
+    }
+  }
+  //   on close animation
+  @keyframes resclosen {
+    0% {
+      transform: rotate(-59deg) translate(-5px, 5px);
+    }
+    100% {
+      transform: rotate(0) translate(0);
+    }
+  }
+  @keyframes resclose2n {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 16px;
+    }
+  }
+  @keyframes resclose3n {
+    0% {
+      width: 20px;
+      transform: rotate(59deg) translate(-3px, -4px);
+    }
+    100% {
+      width: 12px;
+      transform: rotate(0) translate(0);
+    }
+  }
+
+  //   responsive design
+  @media screen and (max-width: 820px) {
+    .logoContainer {
+      h3 {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .donate {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .logoContainer {
+      h3 {
+        display: block;
+      }
+    }
+    justify-content: space-between;
+    padding: 10px 30px;
+    .donate {
+      display: none;
+    }
+    .nav {
+      height: 0px;
+      box-shadow: 0 0 10px lightgray;
+      overflow: hidden;
+      position: absolute;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      background-color: rgb(255, 255, 255);
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      color: var(--font-color);
+    }
+    .res-menu {
+      color: var(--light);
+      display: flex;
+    }
+  }
+}

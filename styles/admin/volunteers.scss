@@ -1,0 +1,69 @@
+.con-volunteer {
+  padding: 20px 40px;
+  .volunteer-list {
+    color: var(--color);
+    .volunteer-select {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 30px;
+      span {
+        width: 50%;
+        background-color: var(--shadow);
+        padding: 5px 10px;
+        border-right: 1px solid var(--gray);
+        text-align: center;
+        text-transform: capitalize;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        &:nth-child(2) {
+          border: none;
+        }
+      }
+      .active {
+        background-color: var(--border-light);
+      }
+    }
+    .list-of-volunteer {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+
+      .volunteer-card {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: var(--light);
+        border-radius: 10px;
+        box-shadow: 0 0 10px var(--shadow);
+        img {
+          width: 200px;
+          height: 150px;
+          margin-bottom: 20px;
+        }
+        span {
+          text-transform: capitalize;
+          display: flex;
+          justify-content: space-between;
+        }
+        .appr {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          button {
+            padding: 5px 10px;
+            color: var(--light);
+          }
+          .deny {
+            background-color: var(--red);
+          }
+          .accept {
+            background-color: var(--success);
+          }
+        }
+      }
+    }
+  }
+}
