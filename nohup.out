@@ -1,0 +1,83 @@
+
+> trust_global_iq@0.1.0 start
+> next start --port 4000
+
+- ready started server on 0.0.0.0:4000, url: http://localhost:4000
+Invariant: failed to load static page {
+  "page": "/",
+  "url": "/",
+  "initUrl": "http://localhost:4000/"
+}
+MissingStaticPage [Error]: Failed to load static file for page: / ENOENT: no such file or directory, open '/home/anish/htdocs/globalTrust/frontend/.next/server/pages/index.html'
+    at /home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/require.js:153:19
+    at async loadComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/load-components.js:68:26)
+    at async NextNodeServer.findPageComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:762:36)
+    at async NextNodeServer.renderPageComponent (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:1322:24)
+    at async NextNodeServer.renderToResponseImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:1365:32)
+    at async NextNodeServer.pipeImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:642:25)
+    at async Object.fn (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:1145:21)
+    at async Router.execute (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/router.js:315:32)
+    at async NextNodeServer.runImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:616:29)
+    at async NextNodeServer.handleRequestImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:547:20)
+MissingStaticPage [Error]: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/home/anish/htdocs/globalTrust/frontend/.next/server/pages/404.html'
+    at /home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/require.js:153:19
+    at async loadComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/load-components.js:68:26)
+    at async NextNodeServer.findPageComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:762:36)
+    at async NextNodeServer.renderErrorToResponseImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:1506:30)
+    at async NextNodeServer.pipeImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:642:25)
+    at async Object.fn (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:1145:21)
+    at async Router.execute (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/router.js:315:32)
+    at async NextNodeServer.runImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:616:29)
+    at async NextNodeServer.handleRequestImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:547:20)
+Invariant: failed to load static page {
+  "page": "/",
+  "url": "/",
+  "initUrl": "http://localhost:4000/"
+}
+MissingStaticPage [Error]: Failed to load static file for page: / ENOENT: no such file or directory, open '/home/anish/htdocs/globalTrust/frontend/.next/server/pages/index.html'
+    at /home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/require.js:153:19
+    at async loadComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/load-components.js:68:26)
+    at async NextNodeServer.findPageComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:762:36)
+    at async NextNodeServer.renderPageComponent (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:1322:24)
+    at async NextNodeServer.renderToResponseImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:1365:32)
+    at async NextNodeServer.pipeImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:642:25)
+    at async Object.fn (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:1145:21)
+    at async Router.execute (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/router.js:315:32)
+    at async NextNodeServer.runImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:616:29)
+    at async NextNodeServer.handleRequestImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:547:20)
+MissingStaticPage [Error]: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/home/anish/htdocs/globalTrust/frontend/.next/server/pages/404.html'
+    at /home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/require.js:153:19
+    at async loadComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/load-components.js:68:26)
+    at async NextNodeServer.findPageComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:762:36)
+    at async NextNodeServer.renderErrorToResponseImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:1506:30)
+    at async NextNodeServer.pipeImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:642:25)
+    at async Object.fn (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:1145:21)
+    at async Router.execute (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/router.js:315:32)
+    at async NextNodeServer.runImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:616:29)
+    at async NextNodeServer.handleRequestImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:547:20)
+Invariant: failed to load static page {
+  "page": "/",
+  "url": "/",
+  "initUrl": "http://localhost:4000/"
+}
+MissingStaticPage [Error]: Failed to load static file for page: / ENOENT: no such file or directory, open '/home/anish/htdocs/globalTrust/frontend/.next/server/pages/index.html'
+    at /home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/require.js:153:19
+    at async loadComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/load-components.js:68:26)
+    at async NextNodeServer.findPageComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:762:36)
+    at async NextNodeServer.renderPageComponent (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:1322:24)
+    at async NextNodeServer.renderToResponseImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:1365:32)
+    at async NextNodeServer.pipeImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:642:25)
+    at async Object.fn (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:1145:21)
+    at async Router.execute (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/router.js:315:32)
+    at async NextNodeServer.runImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:616:29)
+    at async NextNodeServer.handleRequestImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:547:20)
+MissingStaticPage [Error]: Failed to load static file for page: /404 ENOENT: no such file or directory, open '/home/anish/htdocs/globalTrust/frontend/.next/server/pages/404.html'
+    at /home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/require.js:153:19
+    at async loadComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/load-components.js:68:26)
+    at async NextNodeServer.findPageComponentsImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:762:36)
+    at async NextNodeServer.renderErrorToResponseImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:1506:30)
+    at async NextNodeServer.pipeImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:642:25)
+    at async Object.fn (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/next-server.js:1145:21)
+    at async Router.execute (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/router.js:315:32)
+    at async NextNodeServer.runImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:616:29)
+    at async NextNodeServer.handleRequestImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:547:20)

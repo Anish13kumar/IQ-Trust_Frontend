@@ -48,7 +48,7 @@ const Dashboard = ({ data }) => {
           </div>
           <div className="dash-detail">
             <span>No of volunteers</span>
-            <b>100</b>
+            <b>{data.vol < 10 ? `0${data.vol}` : data.vol}</b>
           </div>
         </div>
 
@@ -68,20 +68,22 @@ const Dashboard = ({ data }) => {
 
 export async function getServerSideProps(context) {
   const cookie = context.req.cookies.token;
-  let event = await axios.get(`${Server + API.events}?uid=${cookie}&count=1`);
+  let event = await axios.get(`${Server + API.events}?count=1`);
   if (event.data.status == false) {
     return {
       props: { event: 0, gallery: 0 },
     };
   }
   event = event.data.message;
-  const events = await axios.get(`${Server + API.events}?uid=${cookie}`);
+  const events = await axios.get(`${Server + API.events}?`);
   let gallery = 0;
   events.data.map((a) => {
     gallery += a.images.length;
     gallery += a.videos.length;
   });
+  let vol =  await axios.get(`${Server + API.volunteers}?count=1`);
+  vol = vol.data.message
   return {
-    props: { event, gallery },
+    props: { event, gallery,vol },
   };
 }

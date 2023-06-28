@@ -64,6 +64,7 @@ export async function getServerSideProps(context) {
   const responce = await axios.get(
     `${Server + API.eventid(context.query.id)}?uid=${cookie}`
   );
+  console.log(responce.data)
   return {
     props: { id: context.query.id, data: responce.data },
   };

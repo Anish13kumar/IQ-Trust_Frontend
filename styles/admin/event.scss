@@ -27,7 +27,7 @@
     text-transform: capitalize;
     .confrim-delete {
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
       gap: 20px;
       button {
         padding: 5px 10px;

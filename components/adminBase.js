@@ -78,6 +78,12 @@ export default function Admin({ children }) {
     };
   }, [menuChange]);
 
+  const Logout = ()=>{
+    document.cookie = "token=;"
+    console.log(document.cookie)
+    router.push("/admin")
+  }
+
   return (
     <>
       <Head>
@@ -142,7 +148,7 @@ export default function Admin({ children }) {
               </h1>
               <div className="admin-details">
                 <i className="bi bi-bell" title="notification"></i>
-                <a href="/admin/logout" title="logout">
+                <a title="logout" onClick={Logout}>
                   <i className="bi bi-box-arrow-right"></i>
                 </a>
               </div>
