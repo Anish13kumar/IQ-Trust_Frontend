@@ -82,6 +82,13 @@ const Header = () => {
           events
         </span>
         <span
+          name="volunteer"
+          className="link"
+          onClick={() => ChangeMenu("/volunteer")}
+        >
+          volunteer
+        </span>
+        <span
           name="services"
           className="link"
           onClick={() => ChangeMenu("/services")}

@@ -10,6 +10,8 @@
   .about-box {
     max-width: 1300px;
 
+
+
     .heading {
       display: flex;
       align-items: center;
@@ -127,50 +129,19 @@
       }
     }
 
-    .peoples {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      justify-content: center;
-      margin-top: 50px;
-      h1 {
-        font-size: 36px;
-        color: var(--font-color);
-        margin-bottom: 40px;
-      }
-      .person {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        .perimg {
-          width: 250px;
-          height: 250px;
-          border-radius: 10px;
-          object-fit: cover;
-        }
-        .apply-voulenteer-box {
-          width: 250px;
-          height: 250px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          border-radius: 10px;
-          background-color: var(--shadow);
-          border: 2px dashed var(--primary);
-          cursor: pointer;
-          i {
-            font-size: 60px;
-          }
-          b {
-            font-size: 24px;
-            text-transform: capitalize;
-          }
-        }
-      }
-    }
+   
+  }
+}
+
+.Author-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 0 -30px;
   }
 }

@@ -3,36 +3,41 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 export default function Home() {
 
-  const router = useRouter()
+  const router = useRouter();
 
   const changeroute = (donate) => {
-    router.push(donate)
-  }
+    router.push(donate);
+  };
   const [imageList, setImageList] = useState([
     {
       name: "image1",
-      src: "/banner/banner1.jpg",
-      title: "Charity Life",
-      details: "Charity, Faith and Hope. Help the Homeless. Charity life.",
+      src: "/banner/banner5.jpg",
+      title: "Education",
+      details: "Donate with Kindness. Every amount Donated by you Counts - Empowering Education, Minds, and Inspiring Futures Through IQ Global Trust.",
     },
     {
       name: "image2",
-      src: "/banner/banner2.jpg",
-      title: "Save Children",
-      details: "Donate with Kindness. Every amount Donated by you Counts.",
+      src: "/banner/banner6.jpg",
+      title: "Skill Development",
+      details: "Donate with Kindness. Every amount Donated by you Counts - Building Potential Skills for a Successful Future Through IQ Global Trust.",
     },
     {
       name: "image3",
-      src: "/banner/banner3.jpg",
-      title: "Unconditional Help",
-      details:
-        "Give a Helping hand. We all need to come together. Our Mission.",
+      src: "/banner/banner7.jpg",
+      title: "Eco-Friendly",
+      details: "Donate with Kindness. Every amount Donated by you Counts -  Preserving the Planet with Greener and Cleaner Through IQ Global Trust.",
     },
     {
       name: "image4",
-      src: "/banner/banner4.jpg",
-      title: "Unconditional Help",
-      details: "Should Children suffer this way? Don't leave Orphans alone",
+      src: "/banner/banner8.jpg",
+      title: "Welfare",
+      details: "Donate with Kindness. Every amount Donated by you Counts -  Building Stronger Communities by Supporting and Nurturing Welfare Initiatives.",
+    },
+    {
+      name: "image5",
+      src: "/banner/banner9.jpg",
+      title: "Social and Cultural Spheres",
+      details: "Donate with Kindness. Every amount Donated by you Counts -  Enriching Social and Cultural Experiences by Connecting Hearts, Cultivating Unity.",
     },
   ]);
 
@@ -70,7 +75,7 @@ export default function Home() {
       </Head>
       <div className="trust-home">
         <HomeImageGallery imageList={imageList} />
-        <HomeSecction2 donate={changeroute}/>
+        <HomeSecction2 donate={changeroute} />
         <Mission />
         <Goals />
       </div>
@@ -86,7 +91,7 @@ const HomeImageGallery = (props) => {
             <h6>{a.title}</h6>
             <h1>{a.details}</h1>
             <img key={a.name} src={a.src} alt={a.name} />
-            <button className="btn">read more</button>
+            <button className="btn"><a href="#weprovide">read more</a></button>
           </div>
         ))}
       </div>
@@ -111,7 +116,7 @@ const HomeSecction2 = (props) => {
             <i className="bi bi-emoji-heart-eyes-fill"></i>donate now
           </button>
         </div>
-        <div className="we-provide">
+        <div className="we-provide" id="weprovide">
           <h1>We Provide</h1>
           <div className="provide-box">
             {weProvide.map((a) => (
@@ -187,23 +192,28 @@ const Goals = () => {
 const weProvide = [
   {
     name: "High Quality Education",
-    dis: "To provide Education to all sections of society from children to youth.",
+    dis: "Empowering Education, Minds, and Inspiring Futures Through IQ Global Trust.",
     src: "/provide/edu.png",
   },
   {
-    name: "Supports for elderly",
-    dis: "High quality,person centred supports for people with a disability and the elderly",
+    name: "Eco-Friendly",
+    dis: "Preserving the Planet with Greener and Cleaner Through IQ Global Trust.",
     src: "/provide/i2.png",
   },
   {
     name: "Skill Developments",
-    dis: "To Conduct Skill Development courses among Students & Youth.",
+    dis: "Building Potential Skills for a Successful Future Through IQ Global Trust.",
     src: "/provide/skill.png",
   },
   {
-    name: "Assistance with Community and Civic Participation.",
-    dis: "We are here to help you to engage with community and to enjoy your hobbies",
+    name: "Welfare",
+    dis: "Building Stronger Communities by Supporting and Nurturing Welfare Initiatives.",
     src: "/provide/i4.png",
+  },
+  {
+    name: "Social and Cultural Spheres",
+    dis: "Enriching Social and Cultural Experiences by Connecting Hearts, Cultivating Unity.",
+    src: "/provide/union.png",
   },
 ];
 

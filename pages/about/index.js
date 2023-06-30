@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { API, Server } from "@/api/apiCalls";
 import axios from "axios";
+import { Value } from "sass";
 
 export default function About({ data }) {
   const router = useRouter();
@@ -59,7 +60,7 @@ const AboutBox = (props) => {
           </div>
 
           <div className="image">
-            <img alt="" src="/icons/about.png" className="img1" />
+            <img alt="" src="/icons/About.jpg" className="img1" />
           </div>
         </div>
 
@@ -73,6 +74,17 @@ const AboutBox = (props) => {
               power of education, we aim to create positive and lasting impacts
               in the lives of learners and communities.
             </p>
+          </div>
+
+          <div className="author">
+            <h1>Author Of The Trust</h1>
+            {Author.map((e) => (
+              <div className="Author-box" key={e.name}>
+                <img alt={e.name} src={e.src} />
+                <span>{e.name}</span>
+                <span>{e.Value}</span>
+              </div>
+            ))}
           </div>
 
           <div className="point2">
@@ -131,38 +143,17 @@ const AboutBox = (props) => {
             </span>
           </div>
         </div>
-
-        <div className="peoples">
-          <div className="head">
-            <h1>Happy Voulenteers</h1>
-          </div>
-          <div className="person">
-            {props.data &&
-              props.data.map((a) => (
-                <img
-                  className="perimg"
-                  src={`${Server}/public/volunteers/${a.image_name}`}
-                />
-              ))}
-
-            <div
-              className="apply-voulenteer-box"
-              onClick={() => props.router.push("/voulenteer/new")}
-            >
-              <i className="bi bi-person-plus"></i>
-              <b>apply Voulenteer </b>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 
-export async function getServerSideProps(context) {
-  const cookie = context.req.cookies.token;
-  const responce = await axios.get(`${Server + API.volunteers}?uid=${cookie}`);
-  return {
-    props: { data: responce.data },
-  };
-}
+
+
+const Author = [
+  {
+    src: "/servicons/author1.png.jpg",
+    name: "S. Selvakumar",
+    Value: " Selvakumar is a distinguished individual with an extensive educational background and a wealth of experience in teaching from Salem. His educational journey began with an M.Sc. degree in Information Technology, followed by an M.Phil. and a Ph.D., demonstrating his commitment to advancing knowledge in his field. Having a passion for sharing knowledge and nurturing young minds, He has devoted five years of his career to teaching. His experience as an educator has allowed him to inspire and mentor countless students, instilling a love for computer science and guiding them toward their own academic and professional success. He serves as a Research Associate at the prestigious Nabu Research Academy. In this role, he collaborates with fellow researchers and experts to push the boundaries of computer science, driving innovation and making valuable contributions to the field. Selvakumar actively engages in community initiatives and social causes outside his academic and research pursuits. He believes in using his knowledge and expertise to positively impact society, fostering trust and empowering others through his contributions."
+  },
+];
