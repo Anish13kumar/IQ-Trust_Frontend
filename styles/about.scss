@@ -55,6 +55,7 @@
           color: var(--grey);
           line-height: 30px;
         }
+
         h3 {
           font-size: 24px;
         }
@@ -73,6 +74,7 @@
           object-fit: contain;
         }
       }
+
       @media screen and (max-width: 1240px) {
         .main {
           width: 100%;
@@ -80,6 +82,7 @@
 
         .image {
           margin-top: 30px;
+
           .img1 {
             width: 100%;
             height: 100%;
@@ -91,9 +94,11 @@
     .content {
       padding: 50px 20px;
       width: 100%;
+
       .point {
         p {
           width: 50%;
+
           @media screen and (max-width: 800px) {
             width: 100%;
           }
@@ -122,6 +127,7 @@
         font-size: 17px;
         line-height: 30px;
         color: var(--grey);
+
         b {
           margin-right: 10px;
           font-size: 14px;
@@ -129,19 +135,55 @@
       }
     }
 
-   
+
   }
 }
 
-.Author-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: 0 -30px;
+
+.author {
+  margin-top: 30px;
+
+  .Author-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 26px;
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      object-position: 0 -30px;
+    }
+
+    span {
+      color: var(--primary);
+    }
+  }
+}
+
+.member {
+  margin-top: 30px;
+
+  .member-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 26px;
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      object-position: 0 -30px;
+    }
+
+    span {
+      color: var(--primary);
+    }
   }
 }

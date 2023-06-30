@@ -82,7 +82,18 @@ const AboutBox = (props) => {
               <div className="Author-box" key={e.name}>
                 <img alt={e.name} src={e.src} />
                 <span>{e.name}</span>
-                <span>{e.Value}</span>
+                <p>{e.Value}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="member">
+            <h1>Members of the trust</h1>
+            {Members.map((e) => (
+              <div className="member-box" key={e.name}>
+                <img alt={e.name} src={e.src} />
+                <span>{e.name}</span>
+                <p>{e.Value}</p>
               </div>
             ))}
           </div>
@@ -153,7 +164,20 @@ const AboutBox = (props) => {
 const Author = [
   {
     src: "/servicons/author1.png.jpg",
-    name: "S. Selvakumar",
+    name: "S.PazhaniSwami",
     Value: " Selvakumar is a distinguished individual with an extensive educational background and a wealth of experience in teaching from Salem. His educational journey began with an M.Sc. degree in Information Technology, followed by an M.Phil. and a Ph.D., demonstrating his commitment to advancing knowledge in his field. Having a passion for sharing knowledge and nurturing young minds, He has devoted five years of his career to teaching. His experience as an educator has allowed him to inspire and mentor countless students, instilling a love for computer science and guiding them toward their own academic and professional success. He serves as a Research Associate at the prestigious Nabu Research Academy. In this role, he collaborates with fellow researchers and experts to push the boundaries of computer science, driving innovation and making valuable contributions to the field. Selvakumar actively engages in community initiatives and social causes outside his academic and research pursuits. He believes in using his knowledge and expertise to positively impact society, fostering trust and empowering others through his contributions."
   },
+];
+
+const Members = [
+  {
+    src: "/servicons/author1.png.jpg",
+    name: "S.PeriyaSamy",
+    Value: "S. Periyasamy, a native of Salem, is a highly skilled and dedicated individual in computer science. With an impressive academic background and a decade of teaching experience, Periyasamy has established himself as a respected educator and a valued member of the academic community. His educational journey began with an M.Sc. degree in computer science, followed by an M.Phil. With a passion for teaching and a desire to inspire young minds, Periyasamy has spent ten years honing his skills and sharing his knowledge with students. As an esteemed IQ Global Trust member, Periyasamy actively contributes to the organization's mission of promoting trust and technological excellence. He serves as a Guest Lecturer at Government Arts College in Harur."
+  },
+  {
+    src: "/servicons/author1.png.jpg",
+    name: "S.Prabakaran",
+    Value: "S.Prabakaran, a native of Salem, is a highly accomplished individual with extensive experience in the finance industry. With a Master's in Computer Applications (MCA) and a decade of experience in finance, Prabakaran has established himself as a trusted professional known for his expertise and dedication. Prabakaran's educational journey gave him a strong foundation in technology and its applications. With a decade of experience in the finance industry, Prabakaran has honed his skills and developed a keen understanding of the complexities of financial management. He has held significant roles throughout his career, including his current position as a Credit Manager at HDB Financial Services in Hosur. As a member of the esteemed IQ Global Trust, Prabakaran actively contributes to the organization's mission of promoting trust and integrity in the financial realm. Beyond his professional accomplishments, Prabakaran actively engages with his community and promotes financial literacy. He understands the importance of trust in financial transactions and endeavors to educate individuals about responsible financial practices. "
+  }
 ];
