@@ -81,3 +81,65 @@ MissingStaticPage [Error]: Failed to load static file for page: /404 ENOENT: no 
     at async Router.execute (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/router.js:315:32)
     at async NextNodeServer.runImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:616:29)
     at async NextNodeServer.handleRequestImpl (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/base-server.js:547:20)
+
+> trust_global_iq@0.1.0 start
+> next start --port 4000
+
+- ready started server on 0.0.0.0:4000, url: http://localhost:4000
+
+> trust_global_iq@0.1.0 start
+> next start --port 4000
+
+- error Failed to start server
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1740:16)
+    at listenInCluster (node:net:1788:12)
+    at Server.listen (node:net:1876:7)
+    at /home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/lib/start-server.js:150:16
+    at new Promise (<anonymous>)
+    at startServer (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/lib/start-server.js:135:11)
+    at nextStart (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/cli/next-start.js:77:40) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+> trust_global_iq@0.1.0 start
+> next start --port 4000
+
+- error Failed to start server
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1740:16)
+    at listenInCluster (node:net:1788:12)
+    at Server.listen (node:net:1876:7)
+    at /home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/lib/start-server.js:150:16
+    at new Promise (<anonymous>)
+    at startServer (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/lib/start-server.js:135:11)
+    at nextStart (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/cli/next-start.js:77:40) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+> trust_global_iq@0.1.0 start
+> next start --port 4000
+
+- error Failed to start server
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1740:16)
+    at listenInCluster (node:net:1788:12)
+    at Server.listen (node:net:1876:7)
+    at /home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/lib/start-server.js:150:16
+    at new Promise (<anonymous>)
+    at startServer (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/server/lib/start-server.js:135:11)
+    at nextStart (/home/anish/htdocs/globalTrust/frontend/node_modules/next/dist/cli/next-start.js:77:40) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
