@@ -131,6 +131,20 @@
       opacity: 1;
     }
   }
+  @media screen and (max-width: 1092px) {
+    #imageContainer {
+      .img-col {
+
+        h6,
+        h1,
+        button {
+          left: 50px;
+          font-size: 30px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
 
   @media screen and (max-width: 850px) {
     #imageContainer {
@@ -140,6 +154,8 @@
         h1,
         button {
           left: 50px;
+          font-size: 30px;
+          line-height: 30px;
         }
 
         h6 {
@@ -148,6 +164,7 @@
 
         h1 {
           top: 330px;
+
         }
       }
     }
@@ -161,6 +178,7 @@
         h1,
         button {
           left: 30px;
+          // line-height: 50px;
         }
 
         h6 {
@@ -171,11 +189,11 @@
           top: px;
           font-size: 40px;
           width: fit-content;
-          padding: 0 50px 0 0;
+          // padding: 0 50px 0 0;
         }
 
         button {
-          top: 600px;
+          top: 500px;
         }
       }
     }
@@ -189,6 +207,7 @@
         h1,
         button {
           left: 30px;
+          line-height: 30px;
         }
 
         h6 {
