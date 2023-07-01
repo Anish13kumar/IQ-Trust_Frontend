@@ -9,6 +9,7 @@ export const API = {
   gallery: (eventid) => `/gallery/${eventid}`,
   volunteers: "/volunteers",
   volunteerId: (id) => `/volunteers/${id}`,
+  contact: "/contact",
 };
 
 // route = routing method

@@ -29,7 +29,7 @@ const AboutBox = (props) => {
         </div>
 
         <div className="heading1">
-          <div className="main">
+          {/* <div className="main">
             <h2>Anytime Anywhere</h2>
 
             <h1>We Are Leading Community Care Providers</h1>
@@ -57,22 +57,21 @@ const AboutBox = (props) => {
                 Learn More about Us
               </button>
             </div>
-          </div>
+          </div> */}
 
           <div className="image">
             <img alt="" src="/icons/About.jpg" className="img1" />
           </div>
         </div>
 
+
         <div className="content">
           <div className="point">
             <h1>Who we are</h1>
             <p>
-              As an educational trustee, we are a dedicated group of individuals
-              committed to advancing the field of education and empowering
-              future generations. With a strong belief in the transformative
-              power of education, we aim to create positive and lasting impacts
-              in the lives of learners and communities.
+              Welcome to IQ Global Trust, a dynamic platform designed to empower learners of all ages and backgrounds.
+              Iq Global Trust was registered on March 2023 under registration number 9/BK4/2023. Started by Dr. S.Selvakumar, Mr. S.Periyasamy and Mr.S.Prabakaran.
+              Iq Global Trust aims to Help People with Education, Skill Development, Welfare, eco-friendliness, and Social and Cultural Spheres.
             </p>
           </div>
 
@@ -98,7 +97,7 @@ const AboutBox = (props) => {
             ))}
           </div>
 
-          <div className="point2">
+          {/* <div className="point2">
             <h1>What We provide</h1>
 
             <span className="emoji">
@@ -152,7 +151,7 @@ const AboutBox = (props) => {
               <b>&#9989;</b>learners, fostering innovation, and shaping the
               future of education.
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

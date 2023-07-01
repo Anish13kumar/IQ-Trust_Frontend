@@ -104,9 +104,9 @@ const HomeSecction2 = (props) => {
     <div className="trust-home2 section">
       <section>
         <div className="be-box">
-          <div className="box-b">be the best</div>
-          <div className="box-b">be safe</div>
-          <div className="box-b">be open & honest</div>
+          <div className="box-b">Trust</div>
+          <div className="box-b">Expertise</div>
+          <div className="box-b">Global Reach</div>
         </div>
         <div className="sec-1">
           <h1>Over 93% of all Donations go directly to Projects.</h1>
@@ -226,33 +226,38 @@ const mission = [
 
 const goals = [
   {
-    name: "Homeless Charities.",
-    dis: "Empowering lives, one home at a time.",
+    name: "Mission",
+    dis: "The mission of IQ Global Trust is to leverage our expertise, global reach, and innovative thinking to deliver exceptional value and build long-term partnerships with our People." ,
     src: "/goals/home.png",
   },
   {
-    name: "Education Charities.",
-    dis: "Illuminating minds, transforming futures.",
+    name: "People Success",
+    dis: "Iq Global Trust's primary goal is to help our people succeed by providing them with tailored financial solutions that align with their unique objectives and risk tolerance.  ",
+    src: "/goals/home.png",
+  },
+  {
+    name: "Trust and Integrity",
+    dis: " Iq Global Trust is committed to maintaining the highest standards of trust and integrity in all aspects of our operations",
     src: "/goals/education.png",
   },
   {
-    name: "Health Charities.",
-    dis: "Healing lives, nurturing hope.",
+    name: "Global Expertise",
+    dis: " Iq Global Trust's goal is to provide our People with access to diverse and innovative investment options that can optimize their portfolio returns.",
     src: "/goals/health.png",
   },
   {
-    name: "Animal Charities.",
-    dis: "Championing compassion, protecting our furry friends.",
+    name: "Innovation and Adaptability",
+    dis: " Iq Global Trust aims to provide our People with innovative solutions that meet their evolving needs and deliver sustainable growth.",
     src: "/goals/animal.png",
   },
   {
-    name: "Food Charities.",
-    dis: "Feeding hope, nourishing communities.",
+    name: "Long-term Partnerships",
+    dis: " Iq Global Trust aim to build enduring partnerships with our People based on mutual trust, transparency, and shared success.  ",
     src: "/goals/food.png",
   },
   {
-    name: "Eco Charities.",
-    dis: "Sustaining nature, securing our planet's future.",
+    name: "Social Responsibility",
+    dis: " Iq Global Trust's goal is to integrate environmental, social, and governance (ESG) factors that drive positive change in our communities.",
     src: "/goals/eco.png",
   },
 ];

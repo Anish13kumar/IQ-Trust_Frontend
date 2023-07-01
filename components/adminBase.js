@@ -129,12 +129,12 @@ export default function Admin({ children }) {
                 <i className="bi bi-columns-gap"></i>gallery
               </a>
               <a
-                onClick={() => menuChange("/admin/banner")}
+                onClick={() => menuChange("/admin/contact")}
                 className={
-                  adminMenu == "banner" ? "menulink active" : "menulink"
+                  adminMenu == "contact" ? "menulink active" : "menulink"
                 }
               >
-                <i className="bi bi-card-image"></i>banner
+                <i className="bi bi-card-image"></i>contact
               </a>
             </div>
           </menu>

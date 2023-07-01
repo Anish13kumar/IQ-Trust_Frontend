@@ -18,7 +18,7 @@ export default function AdminEvents() {
 const Banner = (props) => {
   return (
     <>
-      <div className="con-banner">
+      <div className="con-contact">
         {/* <!-- breadcrumb for the current page location  --> */}
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb d-flex align-items-center">
@@ -35,7 +35,7 @@ const Banner = (props) => {
               aria-current="page"
               style={{ color: "#a5adc6" }}
             >
-              banner
+              contact
             </li>
           </ol>
         </nav>
