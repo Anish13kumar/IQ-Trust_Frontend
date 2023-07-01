@@ -1,4 +1,4 @@
-export const Server = "http://127.0.0.1:8000";
+export const Server = "https://apitrust.youngstorage.in";
 
 export const API = {
   usercheck: (uid) => `/auth/usercheck?uid=${uid}`,
