@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 const Custom404 = () => {
   return (
-    <div>
+    <div className='error-container'>
       <h1>404 - Page Not Found</h1>
       <p>Sorry, the page you're looking for does not exist.</p>
-      <Link href="/">
+      <Link href="">
         Go back to the homepage
       </Link>
     </div>

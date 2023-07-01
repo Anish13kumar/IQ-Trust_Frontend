@@ -10,7 +10,7 @@ const Header = () => {
     const res = document.getElementsByClassName("res-menu")[0].childNodes;
     const nav = document.getElementById("nav");
     if (nav.style.height == "" && document.body.clientWidth <= 600) {
-      nav.style.height = "250px";
+      nav.style.height = "300px";
       res[0].style.animation = "resclose 0.5s ease-in-out forwards";
       res[1].style.animation = "resclose2 0.01s ease-in-out forwards";
       res[2].style.animation = "resclose3 0.5s ease-in-out forwards";

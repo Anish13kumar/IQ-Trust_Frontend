@@ -14,7 +14,7 @@ export default function voulnteer(props) {
             <div className="person">
                 <div
                     className="apply-voulenteer-box"
-                    onClick={() => router.push("/voulenteer/new")}
+                    onClick={() => router.push("/volunteer/new")}
                 >
                     <i className="bi bi-person-plus"></i>
                     <b>apply volunteer </b>
