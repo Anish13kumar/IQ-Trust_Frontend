@@ -3,6 +3,7 @@ import Head from "next/head";
 import { API, Server } from "@/api/apiCalls";
 import axios from "axios";
 import { Value } from "sass";
+import Image from "next/image";
 
 export default function About({ data }) {
   const router = useRouter();
@@ -64,17 +65,18 @@ const AboutBox = (props) => {
 
         <div className="content">
           <div className="header" >
-            <h1>Who we are</h1>
+            <h2>Who we are</h2>
           </div>
           <div className="point">
-            <p>
+            <p style={{ paddingTop: "50px" }}>
               Welcome to IQ Global Trust, a dynamic platform designed to empower learners of all ages and backgrounds.
-              Iq Global Trust was registered on March 2023 under registration number 9/BK4/2023. Started by Dr. S.Selvakumar, Mr. S.Periyasamy and Mr.S.Prabakaran.
-              Iq Global Trust aims to Help People with Education, Skill Development, Welfare, eco-friendliness, and Social and Cultural Spheres.
+              IQ Global Trust was registered on March 2023 under registration number 9/BK4/2023. Started by Dr. S.Selvakumar, Mr. S.Periyasamy and Mr.S.Prabakaran.
+              IQ Global Trust aims to Help People with Education, Skill Development, Welfare, eco-friendliness, and Social and Cultural Spheres.
             </p>
-            <div className="image">
+            {/* <div className="image">
               <img alt="" src="/icons/About.jpg" className="img1" />
-            </div>
+            </div> */}
+            <Image alt="" src="/icons/About.jpg " width={300} height={300} className="photo" />
           </div>
 
           <div className="author">

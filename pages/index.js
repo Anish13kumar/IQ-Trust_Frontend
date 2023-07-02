@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { Router, useRouter } from "next/router";
 import Donate from "./donate";
 export default function Home() {
 
@@ -138,7 +138,7 @@ const HomeSecction2 = (props) => {
 
 
 
-const Mission = () => {
+const Mission = (donate) => {
   return (
     <>
       {/* misson */}

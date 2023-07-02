@@ -72,11 +72,11 @@ const Header = () => {
           home
         </span>
         <span
-          name="about"
+          name="about-us"
           className="link"
-          onClick={() => ChangeMenu("/about")}
+          onClick={() => ChangeMenu("/about"-us)}
         >
-          about
+          about-us
         </span>
         <span
           name="events"
