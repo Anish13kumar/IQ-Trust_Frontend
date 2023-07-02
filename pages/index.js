@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Donate from "./donate";
 export default function Home() {
 
   const router = useRouter();
@@ -135,6 +136,8 @@ const HomeSecction2 = (props) => {
   );
 };
 
+
+
 const Mission = () => {
   return (
     <>
@@ -154,10 +157,10 @@ const Mission = () => {
           </b>
           <h1>Help the Homeless & Hungry People.</h1>
           <button className="btn">
-            <i className="bi bi-emoji-heart-eyes-fill"></i>donate now
+            <i className="bi bi-emoji-heart-eyes-fill" style={{ cursor: "pointer" }}></i>donate now
           </button>
         </div>
-      </div>
+      </div >
     </>
   );
 };
@@ -227,7 +230,7 @@ const mission = [
 const goals = [
   {
     name: "Mission",
-    dis: "The mission of IQ Global Trust is to leverage our expertise, global reach, and innovative thinking to deliver exceptional value and build long-term partnerships with our People." ,
+    dis: "The mission of IQ Global Trust is to leverage our expertise, global reach, and innovative thinking to deliver exceptional value and build long-term partnerships with our People.",
     src: "/goals/home.png",
   },
   {

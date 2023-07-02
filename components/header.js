@@ -57,11 +57,15 @@ const Header = () => {
     };
   }, [ChangeMenu]);
 
+  const handleClick = event => {
+    router.push("/");
+  };
+
   return (
     <header id="header">
       <div className="logoContainer">
-        <img src="/logo/logo.png" alt="Logo" className="logo" />
-        <h3 id="navh3">IQ Global Trust</h3>
+        <img src="/logo/logo.png" alt="Logo" className="logo" onClick={handleClick} style={{ cursor: "pointer" }} />
+        <h3 id="navh3" onClick={handleClick} style={{ cursor: "pointer" }} >IQ Global Trust</h3>
       </div>
       <nav className="nav" id="nav">
         <span name="home" className="link" onClick={() => ChangeMenu("/")}>

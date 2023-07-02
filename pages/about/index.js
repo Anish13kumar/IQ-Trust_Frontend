@@ -28,8 +28,7 @@ const AboutBox = (props) => {
           <h1>About us</h1>
         </div>
 
-        <div className="heading1">
-          {/* <div className="main">
+        {/* <div className="main">
             <h2>Anytime Anywhere</h2>
 
             <h1>We Are Leading Community Care Providers</h1>
@@ -59,20 +58,23 @@ const AboutBox = (props) => {
             </div>
           </div> */}
 
-          <div className="image">
-            <img alt="" src="/icons/About.jpg" className="img1" />
-          </div>
-        </div>
+
+
 
 
         <div className="content">
-          <div className="point">
+          <div className="header" >
             <h1>Who we are</h1>
+          </div>
+          <div className="point">
             <p>
               Welcome to IQ Global Trust, a dynamic platform designed to empower learners of all ages and backgrounds.
               Iq Global Trust was registered on March 2023 under registration number 9/BK4/2023. Started by Dr. S.Selvakumar, Mr. S.Periyasamy and Mr.S.Prabakaran.
               Iq Global Trust aims to Help People with Education, Skill Development, Welfare, eco-friendliness, and Social and Cultural Spheres.
             </p>
+            <div className="image">
+              <img alt="" src="/icons/About.jpg" className="img1" />
+            </div>
           </div>
 
           <div className="author">

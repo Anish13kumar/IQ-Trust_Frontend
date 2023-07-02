@@ -78,11 +78,15 @@ export default function Admin({ children }) {
     };
   }, [menuChange]);
 
-  const Logout = ()=>{
-    document.cookie = "token=;"
-    console.log(document.cookie)
-    router.push("/admin")
-  }
+  const Logout = () => {
+    document.cookie = "token=;";
+    console.log(document.cookie);
+    router.push("/admin");
+  };
+
+  const ChangeMenu = (name) => {
+    router.push(name);
+  };
 
   return (
     <>
@@ -94,8 +98,8 @@ export default function Admin({ children }) {
         <div className="container-home">
           <menu id="menu">
             <div className="logo">
-              <img src="/logo/logo.png" alt="" />
-              <h2>iq global trust</h2>
+              <img src="/logo/logo.png" alt="" onClick={() => ChangeMenu("/")} style={{ cursor: "pointer" }} />
+              <h2 onClick={() => ChangeMenu("/")} style={{ cursor: "pointer" }} >iq global trust</h2>
             </div>
             <div className="menu-link">
               <a

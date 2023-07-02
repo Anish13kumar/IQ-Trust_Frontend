@@ -106,7 +106,8 @@
         background-color: var(--primary);
         cursor: pointer;
         opacity: 0;
-        a{
+
+        a {
           all: unset;
         }
       }
@@ -131,6 +132,7 @@
       opacity: 1;
     }
   }
+
   @media screen and (max-width: 1092px) {
     #imageContainer {
       .img-col {
@@ -240,7 +242,7 @@
         }
 
         h6 {
-          top: 200px;
+          top: 150px;
           font-size: 20px;
         }
 
@@ -252,13 +254,13 @@
         }
 
         button {
-          top: 360px;
+          top: 420px;
         }
       }
     }
   }
 
-  .section {}
+  // .section {}
 
   // trust-home2
   .trust-home2 {
