@@ -77,7 +77,7 @@ export default function Home() {
       <div className="trust-home">
         <HomeImageGallery imageList={imageList} />
         <HomeSecction2 donate={changeroute} />
-        <Mission />
+        <Mission donate={changeroute}/>
         <Goals />
       </div>
     </>
@@ -138,7 +138,7 @@ const HomeSecction2 = (props) => {
 
 
 
-const Mission = (donate) => {
+const Mission = (props) => {
   return (
     <>
       {/* misson */}
@@ -156,7 +156,7 @@ const Mission = (donate) => {
             <i className="bi bi-suit-heart"></i>
           </b>
           <h1>Help the Homeless & Hungry People.</h1>
-          <button className="btn">
+          <button className="btn"  onClick={() => props.donate("donate")}>
             <i className="bi bi-emoji-heart-eyes-fill" style={{ cursor: "pointer" }}></i>donate now
           </button>
         </div>
