@@ -1,4 +1,80 @@
 .con-contact {
   padding: 20px 40px;
-  
+  width: 100%;
+
+  .table-col {
+    width: 100%;
+    overflow: auto;
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    th {
+      border: 1px solid black;
+      padding: 10px;
+      text-transform: capitalize;
+    }
+
+    tr {
+      transition: 0.2s ease-in-out;
+      height: fit-content;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 45px;
+        // background-image: linear-gradient(to right,black,transparent);
+        transition: 0.2s ease-in-out;
+      }
+    }
+
+    tr:not(:nth-child(1)):hover {
+      background-color: var(--primary);
+      color: var(--light);
+    }
+
+    tr:hover:not(:nth-child(1))::before {
+      width: 70px;
+    }
+
+    tr:hover td {
+      &:nth-child(2) {
+        opacity: 0;
+      }
+    }
+
+    tr:hover i {
+      display: block;
+      cursor: pointer;
+    }
+
+    tr i {
+      display: none;
+      position: absolute;
+      top: 3px;
+      left: 18px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 10px;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: top;
+
+      &:nth-child(1) {
+        text-align: center;
+      }
+    }
+  }
 }

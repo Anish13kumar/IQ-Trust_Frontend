@@ -66,15 +66,9 @@ export default function Admin({ children }) {
     window.addEventListener("click", resiz);
     const menuclick = document.getElementById("menuclick");
 
-    menuclick.addEventListener("click", menuOpen);
-
-    function menuOpen() {
-      const menu = document.getElementById("menu");
-      menu.style.left = "0";
-    }
     return () => {
       window.removeEventListener("click", resiz);
-      menuclick.removeEventListener("click", menuOpen);
+
     };
   }, [menuChange]);
 
@@ -83,7 +77,10 @@ export default function Admin({ children }) {
     console.log(document.cookie);
     router.push("/admin");
   };
-
+  function menuOpen() {
+    const menu = document.getElementById("menu");
+    menu.style.left = "0";
+  }
   const ChangeMenu = (name) => {
     router.push(name);
   };
@@ -93,83 +90,86 @@ export default function Admin({ children }) {
       <Head>
         <title>Admin Panel</title>
       </Head>
-
-      <div className="admin-home">
-        <div className="container-home">
-          <menu id="menu">
-            <div className="logo">
-              <img src="/logo/logo.png" alt="" onClick={() => ChangeMenu("/")} style={{ cursor: "pointer" }} />
-              <h2 onClick={() => ChangeMenu("/")} style={{ cursor: "pointer" }} >iq global trust</h2>
-            </div>
-            <div className="menu-link">
-              <a
-                onClick={() => menuChange("/admin")}
-                className={adminMenu == "home" ? "menulink active" : "menulink"}
-              >
-                <i className="bi bi-speedometer2"></i>dashboard
-              </a>
-              <a
-                onClick={() => menuChange("/admin/events")}
-                className={
-                  adminMenu == "events" ? "menulink active" : "menulink"
-                }
-              >
-                <i className="bi bi-calendar2-event"></i>events
-              </a>
-              <a
-                onClick={() => menuChange("/admin/volunteers")}
-                className={
-                  adminMenu == "volunteers" ? "menulink active" : "menulink"
-                }
-              >
-                <i className="bi bi-badge-vo"></i>Volunteers
-              </a>
-              <a
-                onClick={() => menuChange("/admin/gallery")}
-                className={
-                  adminMenu == "gallery" ? "menulink active" : "menulink"
-                }
-              >
-                <i className="bi bi-columns-gap"></i>gallery
-              </a>
-              <a
-                onClick={() => menuChange("/admin/contact")}
-                className={
-                  adminMenu == "contact" ? "menulink active" : "menulink"
-                }
-              >
-                <i className="bi bi-card-image"></i>contact
-              </a>
-            </div>
-          </menu>
-          <div className="right-body">
-            <header>
-              <div className="menu-click" id="menuclick">
-                <i className="bi bi-list"></i>
+      {
+        loading ? "loading....." :
+          <div className="admin-home">
+            <div className="container-home">
+              <menu id="menu">
+                <div className="logo">
+                  <img src="/logo/logo.png" alt="" onClick={() => ChangeMenu("/")} style={{ cursor: "pointer" }} />
+                  <h2 onClick={() => ChangeMenu("/")} style={{ cursor: "pointer" }} >iq global trust</h2>
+                </div>
+                <div className="menu-link">
+                  <a
+                    onClick={() => menuChange("/admin")}
+                    className={adminMenu == "home" ? "menulink active" : "menulink"}
+                  >
+                    <i className="bi bi-speedometer2"></i>dashboard
+                  </a>
+                  <a
+                    onClick={() => menuChange("/admin/events")}
+                    className={
+                      adminMenu == "events" ? "menulink active" : "menulink"
+                    }
+                  >
+                    <i className="bi bi-calendar2-event"></i>events
+                  </a>
+                  <a
+                    onClick={() => menuChange("/admin/volunteers")}
+                    className={
+                      adminMenu == "volunteers" ? "menulink active" : "menulink"
+                    }
+                  >
+                    <i className="bi bi-badge-vo"></i>Volunteers
+                  </a>
+                  <a
+                    onClick={() => menuChange("/admin/gallery")}
+                    className={
+                      adminMenu == "gallery" ? "menulink active" : "menulink"
+                    }
+                  >
+                    <i className="bi bi-columns-gap"></i>gallery
+                  </a>
+                  <a
+                    onClick={() => menuChange("/admin/contact")}
+                    className={
+                      adminMenu == "contact" ? "menulink active" : "menulink"
+                    }
+                  >
+                    <i className="bi bi-card-image"></i>contact
+                  </a>
+                </div>
+              </menu>
+              <div className="right-body">
+                <header>
+                  <div className="menu-click" id="menuclick" onClick={menuOpen}>
+                    <i className="bi bi-list"></i>
+                  </div>
+                  <h1 className="fs-3">
+                    <span>Welcome back,</span> <b>Admin</b>
+                  </h1>
+                  <div className="admin-details">
+                    <i className="bi bi-bell" title="notification"></i>
+                    <a title="logout" onClick={Logout}>
+                      <i className="bi bi-box-arrow-right"></i>
+                    </a>
+                  </div>
+                </header>
+                {/* {% block content %} {% endblock %} */}
+                {children}
+                <footer className="admin-footer">
+                  <span>
+                    &copy; 2023 All rights reserved | made with &hearts; by
+                    <b>
+                      <a href="https://bloomskilltech.in"> bloomSkillTech</a>
+                    </b>
+                  </span>
+                </footer>
               </div>
-              <h1 className="fs-3">
-                <span>Welcome back,</span> <b>Admin</b>
-              </h1>
-              <div className="admin-details">
-                <i className="bi bi-bell" title="notification"></i>
-                <a title="logout" onClick={Logout}>
-                  <i className="bi bi-box-arrow-right"></i>
-                </a>
-              </div>
-            </header>
-            {/* {% block content %} {% endblock %} */}
-            {children}
-            <footer className="admin-footer">
-              <span>
-                &copy; 2023 All rights reserved | made with &hearts; by
-                <b>
-                  <a href="https://bloomskilltech.in"> bloomSkillTech</a>
-                </b>
-              </span>
-            </footer>
+            </div>
           </div>
-        </div>
-      </div>
+      }
+
     </>
   );
 }
